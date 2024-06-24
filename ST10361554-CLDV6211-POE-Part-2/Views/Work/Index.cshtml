@@ -1,0 +1,146 @@
+﻿@model IEnumerable<ST10361554_CLDV6211_POE_Part_2.Models.Craftwork>// Model declaration for the CraftworkInformation list
+
+@{
+	ViewData["Title"] = "My Work";
+	<!-- Setting the title of the page -->
+	var categories = ViewBag.Categories as List<CraftworkCategory>;
+	var selectedCategoryId = ViewBag.SelectedCategoryId as int?;
+	var selectedCategoryName = ViewBag.SelectedCategoryName;
+}
+
+<style>
+	.card {
+		background-color: #857257;
+		color: white;
+	}
+
+	h1 {
+		color: white;
+	}
+
+	hr {
+		color: white;
+	}
+
+	label {
+		color:white;
+	}
+
+</style>
+
+<h1>Craftwork on Display</h1> <!-- Heading for the page -->
+<br>
+
+<form method="get" asp-action="FilterByCategory">
+	<div class="form-group">
+		<label for="Category">Select Category</label>
+		<select class="form-control" id="Category" name="categoryId">
+			<option value="">All Categories</option>
+			@if (categories != null)
+			{
+				@foreach (var category in categories)
+				{
+					<option value="@category.CategoryId">@category.CategoryName</option>
+				}
+			}
+		</select>
+	</div>
+	<button type="submit" class="btn btn-primary">
+		<i class="bi bi-filter-circle-fill"></i>
+		Filter
+	</button>
+</form>
+<br />
+@if (selectedCategoryName == null)
+{
+	<label style="font-weight:500;">Selected Category: All Categories</label>
+}
+else
+{
+	<label style="font-weight:500;">Selected Category: @selectedCategoryName</label>
+}
+<br/>
+<br/>
+
+<div class="row">
+	@foreach (var craftwork in Model) // Looping through each craftwork item in the model
+	{
+		bool isOutOfStock = false;
+
+		if (craftwork.CraftworkQuantity == 0)
+		{
+			isOutOfStock = true;
+		}
+
+		@*
+	*Code Attribution
+	*Mark Otto, Jacob Thornton, and Bootstrap
+	*Getbootstrap.com
+	*https://getbootstrap.com/docs/4.3/components/card/
+	*@
+
+		<div class="col-6">
+			<div class="container" style="margin-bottom:15px;">
+				<!-- Container for each card with margin -->
+				<div class="card">
+					<div class="card-header">
+						@craftwork.CraftworkName <!-- Displaying craftwork title in card header -->
+					</div>
+
+					@{
+						string base64Image = "-1";
+						if (craftwork.CraftworkPictureData != null && craftwork.CraftworkPictureData.Length > 0)
+						{
+							base64Image = Convert.ToBase64String(craftwork.CraftworkPictureData);
+						}
+
+						if (!base64Image.Equals("-1"))
+						{
+							<img src="data:image/jpeg;base64,@base64Image" />
+						}
+						else
+						{
+							<p>@base64Image</p>
+						}
+					}
+
+					<div class="card-body">
+						<hr> <!-- Horizontal line -->
+						<h5 class="card-title">Description</h5> <!-- Card title for description -->
+						<p class="card-text">
+							@craftwork.CraftworkDescription <!-- Displaying craftwork description -->
+						</p>
+						<hr />
+						<h6>Quantity: @craftwork.CraftworkQuantity</h6> <!-- Displaying craftwork price -->
+						<hr />
+						<button type="submit" class="btn btn-light">
+							<a asp-action="ArtistDetails" asp-route-id="@craftwork.CraftworkId">
+								<i class="bi bi-info-circle-fill"></i>
+								Artist Details
+							</a>
+						</button>
+						<hr> <!-- Horizontal line -->
+						<h6>Price: R @craftwork.CraftworkPrice</h6> <!-- Displaying craftwork price -->
+						<hr> <!-- Horizontal line -->
+						@if (User.IsInRole("Customer") && isOutOfStock == false)
+						{
+							<button type="submit" class="btn btn-light">
+								<a asp-controller="ShoppingCart" asp-action="AddToCart" asp-route-id="@craftwork.CraftworkId">
+									<i class="bi bi-cart-plus-fill"></i>
+									Add to Cart
+								</a>
+							</button>
+						}
+
+						@if(isOutOfStock)
+						{
+							<p>
+								This item is currently out of stock
+							</p>
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+</div>

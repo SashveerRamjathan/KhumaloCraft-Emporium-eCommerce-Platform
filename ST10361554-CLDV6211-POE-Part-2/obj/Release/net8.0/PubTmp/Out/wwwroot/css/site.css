@@ -1,0 +1,66 @@
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin-bottom: 60px;
+    background-image: url(../Images/Background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, main, footer {
+    padding: 0px;
+    background-color: transparent; /* Reset background color */
+}
+
+header {
+    background-color: #355848; /* Specific background for header */
+    height:50px;
+}
+
+main {
+    flex: 1;
+    background-color: transparent; /* Reset background color */
+}
+
+.footer {
+    padding: 10px 0;
+    background-color: #355848; /* Specific background for footer */
+    color: lightgrey;
+    
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }

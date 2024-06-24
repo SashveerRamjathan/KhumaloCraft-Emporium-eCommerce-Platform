@@ -1,0 +1,99 @@
+﻿@model ST10361554_CLDV6211_POE_Part_2.Models.Craftwork
+
+@{
+	ViewData["Title"] = "Create";
+}
+
+<style>
+
+	h1 {
+		color: white;
+	}
+
+	h4 {
+		color: white;
+	}
+
+	hr {
+		color: white;
+	}
+
+	div {
+		color: white;
+	}
+
+</style>
+
+<h1>Create</h1>
+
+<h4>Craftwork</h4>
+
+<div>
+	<button type="submit" class="btn btn-light" title="View Categories">
+		<a asp-controller="CraftworkCategories" asp-action="Index">
+			Click here to view the list of all available categories
+		</a>
+	</button>
+</div>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="Create" enctype="multipart/form-data">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label asp-for="CraftworkName" class="control-label"></label>
+				<input asp-for="CraftworkName" class="form-control" />
+				<span asp-validation-for="CraftworkName" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="CraftworkDescription" class="control-label"></label>
+				<input asp-for="CraftworkDescription" class="form-control" />
+				<span asp-validation-for="CraftworkDescription" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="CraftworkPrice" class="control-label"></label>
+				<input asp-for="CraftworkPrice" class="form-control" />
+				<span asp-validation-for="CraftworkPrice" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="CraftworkQuantity" class="control-label"></label>
+				<input asp-for="CraftworkQuantity" class="form-control" />
+				<span asp-validation-for="CraftworkQuantity" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<label asp-for="CategoryId" class="control-label"></label>
+				<select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+			</div>
+			<div class="form-group">
+				<label style="font-weight:500" class="control-label">Please select your user id from the dropdown below:</label>
+				<label style="font-weight:700" class="control-label">@ViewData["CurrentUserId"]</label>
+				<label asp-for="ArtistId" class="control-label"></label>
+				<select asp-for="ArtistId" class="form-control" asp-items="ViewBag.ArtistId"></select>
+			</div>
+			<div class="form-group">
+				<label asp-for="ImageFile" class="control-label">Upload a picture of your craftwork</label>
+				<input type="file" asp-for="ImageFile" class="form-control" />
+				<span asp-validation-for="ImageFile" class="text-danger"></span>
+			</div>
+			<div class="form-group">
+				<input type="submit" value="Create" class="btn btn-primary" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<button type="submit" class="btn btn-light" title="Create">
+		<a asp-action="Index">
+			<i class="bi bi-arrow-return-left"></i>
+			Back to List
+		</a>
+	</button>
+</div>
+
+@section Scripts {
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

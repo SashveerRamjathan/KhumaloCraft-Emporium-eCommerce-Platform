@@ -1,0 +1,103 @@
+﻿@model IEnumerable<ST10361554_CLDV6211_POE_Part_2.Models.Feedback>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<style>
+	h1 {
+		color: white;
+	}
+
+	table {
+		color: white;
+	}
+
+	thead {
+		color: white;
+	}
+
+	tr {
+		color: white;
+	}
+
+	th {
+		color: white;
+	}
+
+	button {
+		color: white;
+	}
+</style>
+
+<h1>Index</h1>
+
+<br />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.UserRole)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.FirstName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.LastName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Email)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Comment)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.User)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.UserRole)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.FirstName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.LastName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Email)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Comment)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.User.Id)
+				</td>
+				<td>
+					<div class="btn-group" role="group" aria-label="Actions">
+						<button type="submit" class="btn btn-light">
+							<a asp-action="Details" asp-route-id="@item.UserId">
+								<i class="bi bi-info-circle-fill"></i>
+								Details
+							</a>
+						</button>
+						
+						<button type="submit" class="btn btn-light">
+							<a asp-action="Delete" asp-route-id="@item.UserId">
+								<i class="bi bi-trash3-fill"></i>
+								Delete
+							</a>
+						</button>
+					</div>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

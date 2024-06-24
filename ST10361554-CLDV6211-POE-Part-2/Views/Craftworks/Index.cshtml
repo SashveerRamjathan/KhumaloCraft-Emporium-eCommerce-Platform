@@ -1,0 +1,157 @@
+﻿@model IEnumerable<ST10361554_CLDV6211_POE_Part_2.Models.Craftwork>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<style>
+	h1 {
+		color: white;
+	}
+
+	table {
+		color: white;
+	}
+
+	thead {
+		color: white;
+	}
+
+	tr {
+		color: white;
+	}
+
+	th {
+		color: white;
+	}
+
+	button {
+		color: white;
+	}
+</style>
+
+<h1>Index</h1>
+
+@if (User.IsInRole("Artist"))
+{
+	<button type="submit" class="btn btn-light" title="Details">
+		<a asp-action="Create">
+			<i class="bi bi-plus-circle-fill"></i>
+			Create New Craftwork
+		</a>
+	</button>
+}
+
+<br />
+<br />
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.CraftworkName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.CraftworkDescription)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.CraftworkPrice)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.CraftworkQuantity)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.CraftworkPictureData)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Artist)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.Category)
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.CraftworkName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.CraftworkDescription)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.CraftworkPrice)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.CraftworkQuantity)
+				</td>
+				<td>
+					@{
+						string base64Image = "-1";
+						if (item.CraftworkPictureData != null && item.CraftworkPictureData.Length > 0)
+						{
+							base64Image = Convert.ToBase64String(item.CraftworkPictureData);
+						}
+
+						if (!base64Image.Equals("-1"))
+						{
+							<img src="data:image/jpeg;base64,@base64Image" width="120px" height="120px" />
+						}
+						else
+						{
+							<p>@base64Image</p>
+						}
+					}
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Artist.ArtistId)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.Category.CategoryName)
+				</td>
+				<td>
+					@if (User.IsInRole("Artist"))
+					{
+						<button type="submit" class="btn btn-light">
+							<a asp-action="Edit" asp-route-id="@item.CraftworkId">
+								<i class="bi bi-pencil-fill"></i>
+								Edit
+							</a>
+						</button>
+						<br />
+						<br />
+					}
+					<button type="submit" class="btn btn-light">
+						<a asp-action="Details" asp-route-id="@item.CraftworkId">
+							<i class="bi bi-info-circle-fill"></i>
+							Details
+						</a>
+					</button>
+					<br />
+					<br />
+					<button type="submit" class="btn btn-light">
+						<a asp-action="Delete" asp-route-id="@item.CraftworkId">
+							<i class="bi bi-trash3-fill"></i>
+							Delete
+						</a>
+					</button>
+
+					@if (User.IsInRole("Admin"))
+					{
+						<br />
+						<br />
+						<button type="submit" class="btn btn-light">
+							<a asp-controller="Work" asp-action="ArtistDetails" asp-route-id="@item.CraftworkId">
+								<i class="bi bi-info-circle-fill"></i>
+								Artist Details
+							</a>
+						</button>
+					}
+
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@model Craftwork
+
+@{
+    ViewData["Title"] = "Add To Cart";
+}
+
+<style>
+    /* Styles for form */
+    h2 {
+        color: white;
+    }
+
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+        color: white;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    input[type="number"],
+    input[type="hidden"],
+    button {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+<h2>Add @Model.CraftworkName to Cart</h2>
+<form method="post" asp-action="AddToCartConfirmed">
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" max="@Model.CraftworkQuantity" value="1" required>
+    <input type="hidden" id="craftworkId" name="craftworkId" value="@Model.CraftworkId">
+    <input type="hidden" id="craftworkName" name="craftworkName" value="@Model.CraftworkName">
+    <button type="submit" class="btn btn-primary">Confirm</button>
+</form>
+
+<br />
+<button type="button" class="btn btn-danger" style="color:white;">
+    <a asp-controller="Work" asp-action="Index">
+        <i class="bi bi-arrow-return-left"></i>
+        Cancel
+    </a>
+</button>

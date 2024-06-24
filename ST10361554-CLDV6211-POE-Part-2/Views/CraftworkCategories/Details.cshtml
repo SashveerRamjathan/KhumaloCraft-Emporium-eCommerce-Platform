@@ -1,0 +1,61 @@
+﻿@model ST10361554_CLDV6211_POE_Part_2.Models.CraftworkCategory
+
+@{
+	ViewData["Title"] = "Details";
+}
+
+<style>
+
+	h1 {
+		color: white;
+	}
+
+	h4 {
+		color: white;
+	}
+
+	hr {
+		color: white;
+	}
+
+	div {
+		color: white;
+	}
+
+</style>
+
+<h1>Details</h1>
+
+<div>
+	<h4>CraftworkCategory</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.CategoryName)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.CategoryName)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.CategoryId)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.CategoryId)
+		</dd>
+	</dl>
+</div>
+<div>
+	<button type="submit" class="btn btn-light">
+		<a asp-action="Edit" asp-route-id="@Model?.CategoryId">
+			<i class="bi bi-pencil-fill"></i>
+			Edit
+		</a>
+	</button>
+
+	<button type="submit" class="btn btn-light" title="Create">
+		<a asp-action="Index">
+			<i class="bi bi-arrow-return-left"></i>
+			Back to List
+		</a>
+	</button>
+</div>

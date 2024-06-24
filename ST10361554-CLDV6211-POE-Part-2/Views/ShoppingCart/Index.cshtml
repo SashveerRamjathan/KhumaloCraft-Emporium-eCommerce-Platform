@@ -1,0 +1,95 @@
+﻿@model ST10361554_CLDV6211_POE_Part_2.View_Models.ShoppingCartViewModel
+
+@{
+    ViewData["Title"] = "Shopping Cart";
+}
+
+<style>
+    
+    .cart-total {
+        margin-top: 20px;
+        font-weight: bold;
+    }
+
+    h2 {
+        color: white;
+    }
+
+    table {
+        color: white;
+    }
+
+    thead {
+        color: white;
+    }
+
+    tr {
+        color: white;
+    }
+
+    th {
+        color: white;
+    }
+
+    button {
+        color: white;
+    }
+
+    label {
+        color: white;
+    }
+
+</style>
+
+<h2>Shopping Cart</h2>
+
+<br />
+<form asp-action="PlaceOrder">
+    <button type="submit" class="btn btn-light">
+        <i class="bi bi-bag-check-fill"></i>
+        Place Order
+    </button>
+</form>
+<br />
+<br />
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Craftwork Name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td>@item.craftwork.CraftworkName</td>
+                <td>R @item.craftwork.CraftworkPrice</td>
+                <td>@item.Quantity</td>
+                <td>R @(item.craftwork.CraftworkPrice * item.Quantity)</td>
+                <td>
+                    <form asp-action="RemoveFromCart" method="post">
+                        <input type="hidden" name="craftworkId" value="@item.CraftworkId">
+                        <button type="submit" class="btn btn-danger">
+                            <i class="bi bi-trash3-fill"></i>
+                            Delete
+                        </button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<label class="cart-total">Cart Total: R @Model.CartTotal</label>
+<br />
+<button type="submit" class="btn btn-light">
+    <a asp-controller="Work" asp-action="Index">
+        <i class="bi bi-arrow-return-left"></i>
+        Back to My Work
+    </a>
+</button>

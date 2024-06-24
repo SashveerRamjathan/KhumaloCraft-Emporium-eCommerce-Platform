@@ -1,0 +1,69 @@
+﻿@page
+@model RegisterCustomerModel
+@{
+	ViewData["Title"] = "Customer Registration";
+	Layout = "/Areas/Identity/Pages/_AuthLayout.cshtml";
+}
+
+<form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+	<h2>Create a new KhumaloCraft account.</h2>
+	<hr />
+	<div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+	<div class="form-floating mb-3">
+		<input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+		<label asp-for="Input.Email">Email</label>
+		<span asp-validation-for="Input.Email" class="text-danger"></span>
+	</div>
+	<div class="form-floating mb-3">
+		<input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+		<br />
+		<button type="button" id="togglePassword" class="btn btn-secondary" onclick="togglePasswordVisibility()">Show/Hide</button>
+		<label asp-for="Input.Password">Password</label>
+		<span asp-validation-for="Input.Password" class="text-danger"></span>
+	</div>
+	<div class="form-floating mb-3">
+		<input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+		<br />
+		<button type="button" id="toggleConfirmPassword" class="btn btn-secondary" onclick="toggleConfirmPasswordVisibility()">Show/Hide</button>
+		<label asp-for="Input.ConfirmPassword">Confirm Password</label>
+		<span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+	</div>
+	<button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+	<br />
+	<br />
+	<a class="nav-link" style="text-align:center;" href="/Identity/Account/RegisterArtist">Click here to register as an official KhumaloCraft artist</a>
+</form>
+
+
+@section Scripts {
+	<partial name="_ValidationScriptsPartial" />
+	<script>
+		function togglePasswordVisibility() {
+			var passwordInput = document.getElementById("Input_Password");
+			var toggleButton = document.getElementById("togglePassword");
+
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				toggleButton.textContent = "Hide";
+			} else {
+				passwordInput.type = "password";
+				toggleButton.textContent = "Show";
+			}
+		}
+	</script>
+	<script>
+		function toggleConfirmPasswordVisibility() {
+			var passwordInput = document.getElementById("Input_ConfirmPassword");
+			var toggleButton = document.getElementById("toggleConfirmPassword");
+
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				toggleButton.textContent = "Hide";
+			} else {
+				passwordInput.type = "password";
+				toggleButton.textContent = "Show";
+			}
+		}
+	</script>
+
+}

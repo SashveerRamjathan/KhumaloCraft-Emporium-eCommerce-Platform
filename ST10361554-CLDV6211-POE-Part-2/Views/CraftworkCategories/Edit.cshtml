@@ -1,0 +1,59 @@
+﻿@model ST10361554_CLDV6211_POE_Part_2.Models.CraftworkCategory
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<style>
+
+    h1{
+        color:white;
+    }
+
+    h4{
+        color: white;
+    }
+
+    hr{
+        color: white;
+    }
+
+    div{
+        color: white;
+    }
+
+</style>
+
+<h1>Edit</h1>
+
+<h4>CraftworkCategory</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="CategoryId" />
+            <div class="form-group">
+                <label asp-for="CategoryName" class="control-label"></label>
+                <input asp-for="CategoryName" class="form-control" />
+                <span asp-validation-for="CategoryName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <button type="submit" class="btn btn-light" title="Create">
+        <a asp-action="Index">
+            <i class="bi bi-arrow-return-left"></i>
+            Back to List
+        </a>
+    </button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

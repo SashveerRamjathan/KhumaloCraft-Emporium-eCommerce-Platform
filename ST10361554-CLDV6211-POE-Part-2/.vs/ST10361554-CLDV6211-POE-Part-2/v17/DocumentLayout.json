@@ -1,0 +1,152 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|c:\\users\\sujesh lakhan\\source\\repos\\st10361554-cldv6211-poe-part-2\\controllers\\artistorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|solutionrelative:controllers\\artistorderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|c:\\users\\sujesh lakhan\\source\\repos\\st10361554-cldv6211-poe-part-2\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|solutionrelative:controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|c:\\users\\sujesh lakhan\\source\\repos\\st10361554-cldv6211-poe-part-2\\data\\khumalocraftdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|solutionrelative:data\\khumalocraftdatabasecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|c:\\users\\sujesh lakhan\\source\\repos\\st10361554-cldv6211-poe-part-2\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|c:\\users\\sujesh lakhan\\source\\repos\\st10361554-cldv6211-poe-part-2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|c:\\users\\sujesh lakhan\\source\\repos\\st10361554-cldv6211-poe-part-2\\views\\artistorders\\emailsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|solutionrelative:views\\artistorders\\emailsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|c:\\users\\sujesh lakhan\\source\\repos\\st10361554-cldv6211-poe-part-2\\views\\artistorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D42A060B-9D34-4A25-9FEC-127B38CEAD63}|ST10361554-CLDV6211-POE-Part-2.csproj|solutionrelative:views\\artistorders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 186,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAABKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T16:30:42.684Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-23T16:29:46.526Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "KhumaloCraftDatabaseContext.cs",
+              "DocumentMoniker": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Data\\KhumaloCraftDatabaseContext.cs",
+              "RelativeDocumentMoniker": "Data\\KhumaloCraftDatabaseContext.cs",
+              "ToolTip": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Data\\KhumaloCraftDatabaseContext.cs",
+              "RelativeToolTip": "Data\\KhumaloCraftDatabaseContext.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAYwCsAAAA7AQAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T16:31:27.487Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ArtistOrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Controllers\\ArtistOrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ArtistOrdersController.cs",
+              "ToolTip": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Controllers\\ArtistOrdersController.cs",
+              "RelativeToolTip": "Controllers\\ArtistOrdersController.cs",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAwwCkAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-24T09:47:13.444Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShoppingCartController.cs",
+              "DocumentMoniker": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Controllers\\ShoppingCartController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ShoppingCartController.cs",
+              "ToolTip": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Controllers\\ShoppingCartController.cs",
+              "RelativeToolTip": "Controllers\\ShoppingCartController.cs",
+              "ViewState": "AQIAAFUAAAAAAAAAAAAcwGoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T20:01:29.804Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Views\\ArtistOrders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ArtistOrders\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Views\\ArtistOrders\\Index.cshtml",
+              "RelativeToolTip": "Views\\ArtistOrders\\Index.cshtml",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAACUAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-24T12:11:18.379Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmailSent.cshtml",
+              "DocumentMoniker": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Views\\ArtistOrders\\EmailSent.cshtml",
+              "RelativeDocumentMoniker": "Views\\ArtistOrders\\EmailSent.cshtml",
+              "ToolTip": "C:\\Users\\Sujesh Lakhan\\source\\repos\\ST10361554-CLDV6211-POE-Part-2\\Views\\ArtistOrders\\EmailSent.cshtml",
+              "RelativeToolTip": "Views\\ArtistOrders\\EmailSent.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-24T12:06:16.068Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

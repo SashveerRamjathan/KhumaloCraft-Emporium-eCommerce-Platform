@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAzGVWFrPaRE6WCMCiGT2V1gAAAAACAAAAAAAQZgAAAAEAACAAAAC/jt2zjOo2IZCmZC6+NsiAI3t9tuEBGFUOtGT5a1PzzQAAAAAOgAAAAAIAACAAAAAC8yf+cdTFRg7bcHfeexHHTU0sFKocVPKpWvaUO0pgAYAAAAAEVBr9KvCQFi4oMyH1PGsUL8p9YoABUUTo3kFLOsoTDPgMci/UZP2JIkOmj7vFb15JE7xRiDdTyNaO6Qaf8TmIR1KMVA3pV1MxoyQyZvostLWIhepFpJknFss/Hf1esOmwTnlNz11WnLb6+DKhL9+4UG8BJoPPZLzhi5cSAeQp8kAAAAD+a58rGG8bq1JAfwUY2l5F6ScPg/+4W50x6aglwUdqpDFZkIhp/ZCOF9joYXDRiFF4ARx/t0m6twERWm3PNG8e</EncryptedPassword>
+    <History>True|2024-05-26T19:55:29.9019207Z||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="AzureDatabaseConnection">
+      <Value>Server=tcp:st10361554-cldv6211-server-poe.database.windows.net,1433%3bInitial Catalog=KhumaloCraft_Database%3bPersist Security Info=False%3bUser ID=ST10361554%3bPassword=Sashveer10361554#%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

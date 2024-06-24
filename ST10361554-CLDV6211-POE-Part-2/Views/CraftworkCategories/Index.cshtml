@@ -1,0 +1,95 @@
+﻿@model IEnumerable<ST10361554_CLDV6211_POE_Part_2.Models.CraftworkCategory>
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<style>
+	h1 {
+		color: white;
+	}
+
+	table {
+		color: white;
+	}
+
+	thead {
+		color: white;
+	}
+
+	tr {
+		color: white;
+	}
+
+	th {
+		color: white;
+	}
+
+	button {
+		color: white;
+	}
+</style>
+
+<h1>Index</h1>
+
+@if(User.IsInRole("Admin"))
+{
+	<button type="submit" class="btn btn-light" title="Details">
+		<a asp-action="Create">
+			<i class="bi bi-plus-circle-fill"></i>
+			Create New Category
+		</a>
+	</button>
+}
+
+<br />
+<br />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				@Html.DisplayNameFor(model => model.CategoryName)
+			</th>
+			<th>
+				@Html.DisplayNameFor(model => model.CategoryId)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@Html.DisplayFor(modelItem => item.CategoryName)
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.CategoryId)
+				</td>
+				<td>
+					@if(User.IsInRole("Admin"))
+					{
+						<button type="submit" class="btn btn-light">
+							<a asp-action="Edit" asp-route-id="@item.CategoryId">
+								<i class="bi bi-pencil-fill"></i>
+								Edit
+							</a>
+						</button>
+						<button type="submit" class="btn btn-light">
+							<a asp-action="Details" asp-route-id="@item.CategoryId">
+								<i class="bi bi-info-circle-fill"></i>
+								Details
+							</a>
+						</button>
+						<button type="submit" class="btn btn-light">
+							<a asp-action="Delete" asp-route-id="@item.CategoryId">
+								<i class="bi bi-trash3-fill"></i>
+								Delete
+							</a>
+						</button>
+					}
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

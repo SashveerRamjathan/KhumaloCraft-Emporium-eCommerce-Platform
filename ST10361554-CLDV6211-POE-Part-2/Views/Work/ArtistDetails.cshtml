@@ -1,0 +1,75 @@
+﻿@model ST10361554_CLDV6211_POE_Part_2.Models.Artist
+
+@{
+	ViewData["Title"] = "Artist Details";
+}
+
+<style>
+	.card {
+		background-color: #857257;
+		color: white;
+	}
+
+	h1 {
+		color: white;
+	}
+
+	hr {
+		color: white;
+	}
+
+	/* Center the card vertically */
+	.center-vertically {
+		min-height: 100vh; /* Make the container at least the height of the viewport */
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+</style>
+
+<h1>Artist Details</h1>
+
+@*
+	*Code Attribution
+	*Mark Otto, Jacob Thornton, and Bootstrap
+	*Getbootstrap.com
+	*https://getbootstrap.com/docs/4.3/components/card/
+	*@
+
+<div class="center-vertically">
+	<div class="card" style="width: 35rem;">
+		@{
+			string base64Image = "-1";
+			if (Model.ArtistPictureData != null && Model.ArtistPictureData.Length > 0)
+			{
+				base64Image = Convert.ToBase64String(Model.ArtistPictureData);
+			}
+
+			if (!base64Image.Equals("-1"))
+			{
+				<img class="card-img-top" src="data:image/jpeg;base64,@base64Image" />
+			}
+			else
+			{
+				<p>@base64Image</p>
+			}
+		}
+		<div class="card-body">
+			<h5 class="card-title">@Model.ArtistName</h5>
+			<p class="card-text">@Model.ArtistDescription</p>
+			<p class="card-text"><strong>Email:</strong> @Model.ArtistEmail</p>
+			
+		</div>
+	</div>
+</div>
+
+<br />
+<div>
+	<button type="submit" class="btn btn-light" title="Back to my work">
+		<a asp-action="Index">
+			<i class="bi bi-arrow-return-left"></i>
+			Back to my work
+		</a>
+	</button>
+</div>

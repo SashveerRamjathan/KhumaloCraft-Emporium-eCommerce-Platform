@@ -1,0 +1,85 @@
+﻿@model ST10361554_CLDV6211_POE_Part_2.Models.Feedback
+
+@{
+	ViewData["Title"] = "Details";
+}
+
+<style>
+	h1 {
+		color: white;
+	}
+
+	div {
+		color: white;
+	}
+
+	hr {
+		color: white;
+	}
+
+	dl {
+		color: white;
+	}
+
+	dt {
+		color: white;
+	}
+
+	dd {
+		color: white;
+	}
+
+</style>
+
+<h1>Details</h1>
+
+<div>
+	<h4>Feedback</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.UserRole)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.UserRole)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.FirstName)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.FirstName)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.LastName)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.LastName)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Email)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Email)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.Comment)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.Comment)
+		</dd>
+		<dt class="col-sm-2">
+			@Html.DisplayNameFor(model => model.User)
+		</dt>
+		<dd class="col-sm-10">
+			@Html.DisplayFor(model => model.User.Id)
+		</dd>
+	</dl>
+</div>
+<div>
+	<button type="submit" class="btn btn-light">
+		<a asp-action="Index">
+			<i class="bi bi-arrow-return-left"></i>
+			Back to List
+		</a>
+	</button>
+</div>

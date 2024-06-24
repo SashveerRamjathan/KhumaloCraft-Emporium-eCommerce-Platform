@@ -1,0 +1,80 @@
+﻿@model IEnumerable<ST10361554_CLDV6211_POE_Part_2.Models.OrderDetail>
+
+@{
+	ViewData["Title"] = "Product Orders";
+}
+
+<style>
+	h2 {
+		color: white;
+	}
+
+	table {
+		color: white;
+	}
+
+	thead {
+		color: white;
+	}
+
+	tr {
+		color: white;
+	}
+
+	th {
+		color: white;
+	}
+
+	hr {
+		color: white;
+	}
+
+	p {
+		color: white;
+	}
+
+</style>
+
+<h2>Product Orders</h2>
+
+<hr />
+<p>Please refresh the page to update your list of orders</p>
+<hr />
+
+<table class="table">
+	<thead>
+		<tr>
+			<th>Order ID</th>
+			<th>Craftwork</th>
+			<th>Quantity</th>
+			<th>Status</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>@item.OrderId</td>
+				<td>@item.Craftwork.CraftworkName</td>
+				<td>@item.Quantity</td>
+				<td>@item.CraftworkStatus</td>
+				<td>
+					<form asp-action="UpdateStatus" method="post">
+						<input type="hidden" name="orderDetailId" value="@item.OrderDetailId" />
+						<select name="status" class="form-control">
+							<option value="Pending" id="status">Pending</option>
+							<option value="In Progress" id="status">In Progress</option>
+							<option value="Shipped" id="status">Shipped</option>
+						</select>
+						<br />
+						<button type="submit" class="btn btn-primary">
+							<i class="bi bi-pen-fill"></i>
+							Update
+						</button>
+					</form>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>

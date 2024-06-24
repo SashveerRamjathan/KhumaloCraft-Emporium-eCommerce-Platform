@@ -1,0 +1,102 @@
+﻿@model ST10361554_CLDV6211_POE_Part_2.Models.Feedback //Specifies the model for this view
+
+@{
+    ViewData["Title"] = "Contact Us";  // Sets the title of the page to "Contact Us"
+}
+
+<style>
+    textarea {
+        width: 500px; /* Sets the width of the textarea to 500 pixels */
+        height: 200px; /* Sets the height of the textarea to 200 pixels */
+        resize: none; /* Prevents resizing of the textarea */
+        border-color: lightgray; /* Sets the border color of the textarea */
+    }
+
+    h1, h3, h5, p, label {
+        color: white; /* Sets text color to white for headings, paragraphs, labels, and subheadings */
+    }
+</style>
+
+<h1>Get in Touch with Us</h1>
+<p>
+    Reaching out is easy! We welcome your inquiries, feedback, and collaboration opportunities. Here's how you can contact us:
+</p>
+<br>
+<h3>Contact Information</h3>
+<h5>Phone Number:</h5>
+<p>+27 67 534 6367 </p>
+<h5>Email Address</h5>
+<p>
+    <a href="Support@khumalocraft.co.za">Support@khumalocraft.co.za</a>
+</p>
+<h5>Social Media:</h5>
+<p>
+    <a href="https://www.instagram.com"><i class="bi bi-instagram"></i>Instagram</a>
+    <br>
+    <a href="https://www.facebook.com"><i class="bi bi-facebook"></i>FaceBook</a>
+    <br>
+    <a href="https://www.twitter.com"><i class="bi bi-twitter-x"></i>Twitter</a>
+</p>
+<h3>Departments</h3>
+<p>If you have specific questions or requests, here are the contact details for different departments</p>
+<h5>Artisan Relations:</h5>
+<p>
+    <a href="Relations@khumalocraft.co.za">Relations@khumalocraft.co.za</a>
+</p>
+<h5>Partnerships and Collaborations:</h5>
+<p>
+    <a href="Collaborations@khumalocraft.co.za">Collaborations@khumalocraft.co.za</a>
+</p>
+<h5>Marketing and Promotions:</h5>
+<p>
+    <a href="Marketing@khumalocraft.co.za">Marketing@khumalocraft.co.za</a>
+</p>
+<h5>Finance and Payments:</h5>
+<p>
+    <a href="Finance@khumalocraft.co.za">Finance@khumalocraft.co.za</a>
+</p>
+<h5>Legal and Compliance:</h5>
+<p>
+    <a href="Compliance@khumalocraft.co.za">Compliance@khumalocraft.co.za</a>
+</p>
+<h3>We Value Your Feedback</h3>
+<p>
+    Your feedback helps us improve our services and offerings.
+    Please don't hesitate to leave a comment.
+    We look forward to hearing from you!
+</p>
+<form asp-controller="Feedback" asp-action="CaptureFeedback" style="width:500px">
+    <div>
+        <label asp-for="FirstName" class="control-label"> First Name:</label>
+        <input required asp-for="FirstName" class="form-control" />
+    </div>
+    <br>
+    <div>
+        <label asp-for="LastName" class="control-label"> Last Name:</label>
+        <input required asp-for="LastName" class="form-control" />
+    </div>
+    <br>
+    <div>
+        <label asp-for="Email" class="control-label">Email Address:</label>
+        <input required type="email" asp-for="Email" class="form-control" />
+    </div>
+    <br>
+    <div>
+        <label asp-for="Comment" class="control-label"> Comments or Feedback:</label>
+        <textarea asp-for="Comment" rows="4" cols="50" style="border-color:lightgray" class="form-control"></textarea>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-6">
+            <a asp-action="CaptureFeedback" method="post">
+                <input type="submit" class="btn btn-primary" style="margin-right:10px; width:245px;background-color:#0044A3; border-color:#0044A3;" />
+            </a>
+        </div>
+        <div class="col-6">
+            <input type="reset" class="btn btn-danger" style="width:238px; background-color:#A02D37; border-color:#A02D37" />
+        </div>
+
+    </div>
+
+
+</form>
