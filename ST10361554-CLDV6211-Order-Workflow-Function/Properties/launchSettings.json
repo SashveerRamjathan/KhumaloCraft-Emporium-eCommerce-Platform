@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ST10361554_CLDV6211_Order_Workflow_Function": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7028",
+      "launchBrowser": false
+    }
+  }
+}
