@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "ST10361554_CLDV6211_Order_Notification_Email_Sender": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7141",
+      "launchBrowser": false
+    }
+  }
+}
